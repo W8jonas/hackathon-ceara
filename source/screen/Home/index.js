@@ -25,11 +25,11 @@ export function Home({navigation}) {
             <View style={styles.container}>
                 <View style={{height: 50, }} />
 
-                <ResponsiveText style={{color: '#F8F8F8', marginVertical: 10}} h1>
+                <ResponsiveText style={{color: '#000', marginVertical: 10}} h1>
                     Bem-vindo
                 </ResponsiveText>
 
-                <ResponsiveText style={{color: '#F8F8F8', marginVertical: 10}} h4>
+                <ResponsiveText style={{color: '#000', marginVertical: 10}} h4>
                     Próximo desafio:{'\n'}28/11, 19:00
                 </ResponsiveText>
 
@@ -39,16 +39,10 @@ export function Home({navigation}) {
                     </ResponsiveText>
                 </View>
 
-                <ResponsiveText style={{color: '#F8F8F8', marginVertical: 10, textAlign: 'center'}} h4>
+                <ResponsiveText style={{color: '#000', marginVertical: 10, textAlign: 'center'}} h4>
                     Para testar coloque o código: 0000
                 </ResponsiveText>
 
-                <TextInput
-                    style={{width: '80%', backgroundColor: '#F8F8F820', alignSelf: 'center', fontSize: 22, textAlign: 'center', borderRadius: 8, color: '#FFF', padding: 10}}
-                    placeholderTextColor="#f8f8f8"
-                    placeholder="Insira o seu código aqui."
-                    keyboardType={'numeric'}
-                />
                 <TouchableOpacity 
                     style={{position: 'absolute', bottom: 10, alignSelf: 'center'}} 
                     activeOpacity={0.5} 
