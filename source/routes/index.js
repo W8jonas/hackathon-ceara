@@ -11,6 +11,7 @@ import { Home } from '../screen/Home'
 import { routesPaths } from './routesPaths'
 import { SplashScreen } from '../screen/SplashScreen'
 import { OnboardingTransparency } from '../screen/OnboardingTransparence'
+import { OnboardingEasy } from '../screen/OnboardingEasy'
 
 
 LogBox.ignoreLogs(['Setting a timer for a long period'])
@@ -33,6 +34,7 @@ export function Routes() {
             <Stack.Navigator screenOptions={{headerShown: false}}>
                 <Stack.Screen name={routesPaths.splash} component={SplashScreen} />
                 <Stack.Screen name={routesPaths.onboardingTransparency} component={OnboardingTransparency} />
+                <Stack.Screen name={routesPaths.onboardingEasy} component={OnboardingEasy} />
                 <Stack.Screen name={routesPaths.home} component={Home} />
             </Stack.Navigator>
         </NavigationContainer>
