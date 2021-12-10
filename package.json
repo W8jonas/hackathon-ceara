@@ -12,6 +12,7 @@
     "@react-navigation/native": "5.x",
     "@react-navigation/stack": "^5.x",
     "expo": "~43.0.2",
+    "expo-app-loading": "~1.2.1",
     "expo-status-bar": "~1.1.0",
     "lottie-react-native": "4.0.3",
     "react": "17.0.1",
