@@ -1,10 +1,5 @@
 export const routesPaths = {
 	splash: 'Splash',
-	auth: 'Auth',
+	onboardingTransparency: 'OnboardingTransparency',
 	home: 'Home',
-	preChallenge: 'PreChallenge',
-	challenge: 'Challenge',
-	ranking: 'Ranking',
-	bonus: 'Bonus',
-	score: 'Score',
 }

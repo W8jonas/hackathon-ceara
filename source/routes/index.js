@@ -10,6 +10,7 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold,  } from '@expo-google-font
 import { Home } from '../screen/Home'
 import { routesPaths } from './routesPaths'
 import { SplashScreen } from '../screen/SplashScreen'
+import { OnboardingTransparency } from '../screen/OnboardingTransparence'
 
 
 LogBox.ignoreLogs(['Setting a timer for a long period'])
@@ -31,6 +32,7 @@ export function Routes() {
         <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false}}>
                 <Stack.Screen name={routesPaths.splash} component={SplashScreen} />
+                <Stack.Screen name={routesPaths.onboardingTransparency} component={OnboardingTransparency} />
                 <Stack.Screen name={routesPaths.home} component={Home} />
             </Stack.Navigator>
         </NavigationContainer>
