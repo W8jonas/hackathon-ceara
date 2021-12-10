@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput } from 'react-native'
 
 // Modules
+import LottieView from 'lottie-react-native';
 
 // Assets
 import Play from '../../assets/Play.png'
@@ -24,9 +25,15 @@ export function OnboardingTransparency({navigation}) {
                 </ResponsiveText>
 
                 <View style={{height: 317, width: 317, alignSelf: 'center', elevation: 10, borderRadius: 317, backgroundColor: '#F8F8F8', justifyContent: 'center', alignItems: 'center'}}>
-                    <ResponsiveText h5 bold style={{color: '#000'}}>
-                        ANIMAÇÂO AQUI
-                    </ResponsiveText>
+                    <LottieView
+                        source={require('./animation.json')} 
+                        style={{
+                            width: 180,
+                            height: 180,
+                        }}
+                        autoPlay
+                        loop
+                    />
                 </View>
 
                 <ResponsiveText style={{color: '#222', marginVertical: 10, textAlign: 'center'}} h4>
@@ -35,7 +42,7 @@ export function OnboardingTransparency({navigation}) {
                 
                 <ButtonBase
                     label="Prosseguir"
-                    onPress={() => navigation.navigate(routesPaths.preChallenge)}
+                    onPress={() => navigation.navigate(routesPaths.onboardingEasy)}
                     style={{alignSelf: 'center'}}
                 />
                 
