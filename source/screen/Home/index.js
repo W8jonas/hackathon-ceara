@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Dimensions, ImageBackground } from 'react-native'
 
 // Modules
+import Carousel from 'react-native-snap-carousel';
 
 // Assets
 import fornecimento from '../../assets/fornecimento.png'
 import shadow from './shadow.png'
 import background from './background.png'
 import obras from './obras.png'
+import coronavirus from './coronavirus.png'
+import contratosEConvenios from './contratosEConvenios.png'
+import despesasNotaEmpenho from './despesasNotaEmpenho.png'
+import servidoresPublicos from './servidoresPublicos.png'
 
 // Functions
 
@@ -19,6 +24,7 @@ import { routesPaths } from '../../routes/routesPaths';
 const screenWidth = Dimensions.get('window').width
 
 export function Home({navigation}) {
+    const ref = useRef()
 
     const imageWidth = 324
     const imageHeight = 258
@@ -27,6 +33,37 @@ export function Home({navigation}) {
     const imageWidthResized = screenWidth * 0.8
     const imageHeightResized = imageWidthResized / proportion
 
+    const data = [
+        {label: 'obras', title: 'Despesas por Obras', image: obras, redirect: true },
+        {label: 'contratosConvenios', title: 'Contratos e Convênios', image: contratosEConvenios, redirect: true },
+        {label: 'despesasNotaEmpenho', title: 'Despesas por nota de empenho', image: despesasNotaEmpenho },
+        {label: 'servidoresPublicos', title: 'Servidores Públicos', image: servidoresPublicos },
+        {label: 'coronavirus', title: 'Coronavírus', image: coronavirus },
+    ]
+
+    function _renderItem({item}) {
+        return (
+            <View>
+                <TouchableOpacity
+                    activeOpacity={0.7}
+                    onPress={() => item.redirect 
+                        ? navigation.navigate(routesPaths.redirect, {label: item.label}) 
+                        : navigation.navigate(routesPaths.questions, {label: item.label})
+                    }
+                >
+                    <ImageBackground source={background} style={{ width: imageWidthResized, height: imageHeightResized, alignSelf: 'center'}}>
+                        <ResponsiveText h4 style={{color: '#F8F8F8', marginVertical: 5, alignSelf: 'center'}}>
+                            {item.title}
+                        </ResponsiveText>
+                        <Image source={item.image} style={{ width: screenWidth * 0.75, resizeMode: 'contain' , alignSelf: 'center'}} />
+                    </ImageBackground>
+                </TouchableOpacity>
+
+                <Image source={shadow} style={{ width: screenWidth * 0.8, resizeMode: 'stretch' , alignSelf: 'center', marginTop: 10}} />
+            </View>
+        )
+    }
+
     return (
         <View style={styles.container}>
 
@@ -34,16 +71,15 @@ export function Home({navigation}) {
                 Informações
             </ResponsiveText>
 
-            <View>
-                <ImageBackground source={background} style={{ width: imageWidthResized, height: imageHeightResized, alignSelf: 'center'}}>
-                    <ResponsiveText h4 style={{color: '#F8F8F8', marginVertical: 5, alignSelf: 'center'}}>
-                        Despesas por Obras
-                    </ResponsiveText>
-                    <Image source={obras} style={{ width: screenWidth * 0.75, resizeMode: 'contain' , alignSelf: 'center'}} />
-                </ImageBackground>
-
-                <Image source={shadow} style={{ width: screenWidth * 0.8, resizeMode: 'stretch' , alignSelf: 'center', marginTop: 10}} />
-            </View>
+            <View style={{height: 80}} />
+        
+            <Carousel
+                ref={(c) => { ref.current = c; }}
+                data={data}
+                renderItem={_renderItem}
+                sliderWidth={screenWidth}
+                itemWidth={screenWidth * 0.8}
+            />
 
             <TouchableOpacity 
                 activeOpacity={0.5} 
