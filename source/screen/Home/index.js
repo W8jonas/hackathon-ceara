@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Dimensions } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Dimensions, ImageBackground } from 'react-native'
 
 // Modules
 
 // Assets
 import fornecimento from '../../assets/fornecimento.png'
+import shadow from './shadow.png'
+import background from './background.png'
+import obras from './obras.png'
 
 // Functions
 
@@ -16,6 +19,14 @@ import { routesPaths } from '../../routes/routesPaths';
 const screenWidth = Dimensions.get('window').width
 
 export function Home({navigation}) {
+
+    const imageWidth = 324
+    const imageHeight = 258
+    const proportion = imageWidth / imageHeight
+
+    const imageWidthResized = screenWidth * 0.8
+    const imageHeightResized = imageWidthResized / proportion
+
     return (
         <View style={styles.container}>
 
@@ -23,14 +34,20 @@ export function Home({navigation}) {
                 Informações
             </ResponsiveText>
 
+            <View>
+                <ImageBackground source={background} style={{ width: imageWidthResized, height: imageHeightResized, alignSelf: 'center'}}>
+                    <ResponsiveText h4 style={{color: '#F8F8F8', marginVertical: 5, alignSelf: 'center'}}>
+                        Despesas por Obras
+                    </ResponsiveText>
+                    <Image source={obras} style={{ width: screenWidth * 0.75, resizeMode: 'contain' , alignSelf: 'center'}} />
+                </ImageBackground>
 
-            <ResponsiveText style={{color: '#000', marginVertical: 10}} h4>
-                Próximo desafio:{'\n'}28/11, 19:00
-            </ResponsiveText>
+                <Image source={shadow} style={{ width: screenWidth * 0.8, resizeMode: 'stretch' , alignSelf: 'center', marginTop: 10}} />
+            </View>
 
             <TouchableOpacity 
                 activeOpacity={0.5} 
-                onPress={() => navigation.navigate(routesPaths.home)}
+                onPress={() => navigation.navigate(routesPaths.questions)}
                 style={{
                     position: 'absolute', 
                     bottom: 130, 
