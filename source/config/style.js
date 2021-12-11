@@ -3,7 +3,9 @@ export const baseColors = {
     blueMedium: '#125DD6',
     white: '#E5E5E5',
     backgroundWhite: '#F2F3F5',
-    base2: '#006C30'
+    base2: '#006C30',
+
+    base3: '#FFBD00'
 }
 
 
