@@ -48,7 +48,7 @@ export function Home({navigation}) {
                     activeOpacity={0.7}
                     onPress={() => item.redirect 
                         ? navigation.navigate(routesPaths.redirect, {label: item.label}) 
-                        : navigation.navigate(routesPaths.questions, {label: item.label})
+                        : navigation.navigate(routesPaths.indicators, {label: item.label})
                     }
                 >
                     <ImageBackground source={background} style={{ width: imageWidthResized, height: imageHeightResized, alignSelf: 'center'}}>
