@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, ScrollView, TouchableOpacity, Image } from 'react-native'
 import { ResponsiveText } from '../../components/ResponsiveText'
 
 // Modules
@@ -93,8 +93,8 @@ export function Indicators({route}) {
     }
 
     return (
-        <View>
-            <View style={{backgroundColor: '#006C30', width: '100%', height: 80, paddingTop: 30, marginBottom: 20, alignItems: 'center', justifyContent: 'center'}}>
+        <View style={{flex: 1}}>
+            <View style={{backgroundColor: '#006C30', width: '100%', height: 80, paddingTop: 30, marginBottom: 10, alignItems: 'center', justifyContent: 'center'}}>
                 <ResponsiveText
                     h2
                     style={{
@@ -105,23 +105,25 @@ export function Indicators({route}) {
                 </ResponsiveText>
             </View>
             
-            {data[label].map((data) => (
-                <View style={{paddingHorizontal: 20}}>
-                    <View style={{backgroundColor: 'rgba(193, 193, 193, 0.8)', borderRadius: 12, elevation: 5}}>
-                        <ResponsiveText h5 style={{color: '#000', marginTop: 10, paddingHorizontal: 10}}>
-                            {data.topic}
+            <ScrollView>
+                {data[label].map((data) => (
+                    <View style={{paddingHorizontal: 20, marginVertical: 10}}>
+                        <View style={{backgroundColor: 'rgba(193, 193, 193, 0.8)', borderRadius: 12, elevation: 5}}>
+                            <ResponsiveText h5 style={{color: '#000', marginTop: 10, paddingHorizontal: 10}}>
+                                {data.topic}
+                            </ResponsiveText>
+
+                            <Image source={background} style={{ width: '90%', resizeMode: 'contain', alignSelf: 'center', marginBottom: 10 }} />
+                        </View>
+
+                        <ResponsiveText p style={{color: '#000', paddingHorizontal: 8, marginTop: 5, marginBottom: 10}}>
+                            {data.list.map((item) => (
+                                '▪ ' + item + '\n'
+                            ))}
                         </ResponsiveText>
-
-                        <Image source={background} style={{ width: '90%', resizeMode: 'contain', alignSelf: 'center', marginBottom: 10 }} />
                     </View>
-
-                    <ResponsiveText p style={{color: '#000', paddingHorizontal: 8, marginTop: 5, marginBottom: 10}}>
-                        {data.list.map((item) => (
-                            '▪ ' + item + '\n'
-                        ))}
-                    </ResponsiveText>
-                </View>
-            ))}
+                ))}
+            </ScrollView>
 
         </View>
     )
