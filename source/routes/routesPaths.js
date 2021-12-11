@@ -5,4 +5,6 @@ export const routesPaths = {
 	onboardingTopics: 'OnboardingTopics',
 	home: 'Home',
 	questions: 'Questions',
+	redirect: 'Redirect',
+	indicators: 'Indicators',
 }
