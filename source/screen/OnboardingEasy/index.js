@@ -42,7 +42,7 @@ export function OnboardingEasy({navigation}) {
                 
                 <ButtonBase
                     label="Prosseguir"
-                    onPress={() => navigation.navigate(routesPaths.home)}
+                    onPress={() => navigation.navigate(routesPaths.onboardingTopics)}
                     style={{alignSelf: 'center'}}
                 />
                 

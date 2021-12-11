@@ -1,66 +1,70 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Dimensions } from 'react-native'
 
 // Modules
-import { LinearGradient } from 'expo-linear-gradient';
 
 // Assets
-import Play from '../../assets/Play.png'
+import fornecimento from '../../assets/fornecimento.png'
 
 // Functions
 
 // Components
 import { ResponsiveText } from '../../components/ResponsiveText'
-import { baseGradients } from '../../config/style';
+import { baseColors, baseGradients } from '../../config/style';
 import { routesPaths } from '../../routes/routesPaths';
+
+const screenWidth = Dimensions.get('window').width
 
 export function Home({navigation}) {
     return (
-        <LinearGradient
-            colors={baseGradients.linearBlue2.colors}
-            style={styles.linearContainer}
-            start={baseGradients.linearBlue2.start}
-            end={baseGradients.linearBlue2.end}
-        >
-            <View style={styles.container}>
-                <View style={{height: 50, }} />
+        <View style={styles.container}>
 
-                <ResponsiveText style={{color: '#000', marginVertical: 10}} h1>
-                    Bem-vindo
-                </ResponsiveText>
+            <ResponsiveText style={{color: '#000', marginVertical: 10, marginTop: 50, alignSelf: 'center'}} h1>
+                Informações
+            </ResponsiveText>
 
-                <ResponsiveText style={{color: '#000', marginVertical: 10}} h4>
-                    Próximo desafio:{'\n'}28/11, 19:00
-                </ResponsiveText>
 
-                <View style={{height: 40, width: 120, borderRadius: 12, marginVertical: 20, backgroundColor: '#F8F8F840', justifyContent: 'center', alignItems: 'center'}}>
-                    <ResponsiveText h5 bold style={{color: '#FFF'}}>
-                        3541 Eduks
-                    </ResponsiveText>
-                </View>
+            <ResponsiveText style={{color: '#000', marginVertical: 10}} h4>
+                Próximo desafio:{'\n'}28/11, 19:00
+            </ResponsiveText>
 
-                <ResponsiveText style={{color: '#000', marginVertical: 10, textAlign: 'center'}} h4>
-                    Para testar coloque o código: 0000
-                </ResponsiveText>
-
-                <TouchableOpacity 
-                    style={{position: 'absolute', bottom: 10, alignSelf: 'center'}} 
-                    activeOpacity={0.5} 
-                    onPress={() => navigation.navigate(routesPaths.preChallenge)}
+            <TouchableOpacity 
+                activeOpacity={0.5} 
+                onPress={() => navigation.navigate(routesPaths.home)}
+                style={{
+                    position: 'absolute', 
+                    bottom: 130, 
+                    backgroundColor: 'rgba(248, 248, 248, 0.6)',
+                    borderRadius: 20,
+                    right: 20,
+                    elevation: 5
+                }} 
+            >
+                <ResponsiveText 
+                    h4
+                    style={{
+                        color: '#000', 
+                        textAlign: 'center', 
+                        paddingHorizontal: 20, 
+                        paddingVertical: 7, 
+                        backgroundColor: '#FFF', 
+                        borderRadius: 20, 
+                }}
                 >
-                    <Image source={Play} style={{ height: 200, width: 200 }} />
-                </TouchableOpacity>
-            </View>
-        </LinearGradient>
+                    Dúvidas
+                </ResponsiveText>
+            </TouchableOpacity>
+
+            <Image source={fornecimento} style={{ width: screenWidth, resizeMode: 'stretch' , alignSelf: 'center'}} />
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
-    linearContainer: {
-        flex: 1,
-    },
     container: {
         flex: 1,
         paddingHorizontal: 10,
+        justifyContent: 'space-between',
+        backgroundColor: baseColors.backgroundWhite
     },
 })
