@@ -19,7 +19,7 @@ export function Header({onPress, title, size}) {
             </TouchableOpacity>
 
             {size === 'large' ?
-            <ResponsiveText h2 style={{color: '#000', paddingHorizontal: 8, marginTop: 5}}>
+            <ResponsiveText h3 style={{color: '#000', paddingHorizontal: 8, marginTop: 5}}>
                 {title}
             </ResponsiveText> : <ResponsiveText p style={{color: '#000', paddingHorizontal: 8, marginTop: 5}}>
                 {title}
