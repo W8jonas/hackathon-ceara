@@ -5,8 +5,8 @@ import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput } from 'reac
 import LottieView from 'lottie-react-native';
 
 // Assets
-import Play from '../../assets/Play.png'
 import { ButtonBase } from '../../components/Button';
+import logoIcon2 from '../../assets/logoIcon2.png'
 
 // Functions
 
@@ -18,7 +18,8 @@ import { routesPaths } from '../../routes/routesPaths';
 export function OnboardingEasy({navigation}) {
     return (
             <View style={styles.container}>
-                <View style={{height: 70 }} />
+                <View style={{height: 40 }} />
+                <Image source={logoIcon2} style={{ height: 203/1.7, width: 203/1.7, alignSelf: 'center'}} />
 
                 <ResponsiveText style={{color: '#222', marginVertical: 10, textAlign: 'center'}} h2>
                     Nunca foi tão fácil consultar e entender dados públicos 
