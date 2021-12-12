@@ -44,7 +44,7 @@ export function Home({navigation}) {
     useEffect(() => {
         console.log('Loading Sound');
         Audio.Sound.createAsync(
-           require('../../assets/sounds/pop.mp3')
+           require('../../assets/sounds/ClairPop.mp3')
         ).then(({sound}) => {setSound(sound)})
     }, [])
 
@@ -54,7 +54,7 @@ export function Home({navigation}) {
           : undefined
     }, [sound])
 
-      
+
     const data = [
         {label: 'obras', title: 'Despesas por Obras', image: obras, redirect: true },
         {label: 'contratosConvenios', title: 'Contratos e Convênios', image: contratosEConvenios, redirect: true },
