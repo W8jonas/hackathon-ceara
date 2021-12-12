@@ -19,77 +19,127 @@ export function Indicators({route, navigation}) {
         'obras': [],
         'Contratos': [
             {
-                topic: 'Total ',
+                topic: 'Média de despesa em contratos: 486474 ',
                 list: [
-                    'Média de despesa em contratos: 486474',
-                    'Quantidade de despesas: 3884',
-                    'Aprox 20 mi',
+                    'texto texto texto texto texto texto texto texto texto texto texto',
+                ]
+            },
+            {
+                topic: 'Quantidade de despesas: 3884 ',
+                list: [
+                    'texto texto texto texto texto texto texto texto texto texto texto',
+                ]
+            },
+            {
+                topic: 'Aprox 20 mi ',
+                list: [
+                    'texto texto texto texto texto texto texto texto texto texto texto',
                 ]
             }
         ],
         'Convênios': [
             {
-                topic: 'Total ',
+                topic: 'Média de despesa em Convênios: 491032  ',
                 list: [
-                    'Média de despesa em Convênios: 491032 ',
-                    'Quantidade de despesas: 3884',
-                    'Aprox  19 mi',
+                    'texto texto texto texto texto texto texto texto texto texto texto',
                 ]
-            }
+            },
+            {
+                topic: 'Quantidade de despesas: 3884 ',
+                list: [
+                    'texto texto texto texto texto texto texto texto texto texto texto',
+                ]
+            },
+            {
+                topic: 'Aprox  19 mi ',
+                list: [
+                    'texto texto texto texto texto texto texto texto texto texto texto',
+                ]
+            },
         ],
         'despesasNotaEmpenho': [
             {
-                topic: '1º trimestre ',
+                topic: 'Média de gasto por despesa: 154349 ',
                 list: [
-                    'Média de gasto por despesa: 154349 ',
-                    'Quantidade de despesas: 29930',
-                    'Aprox 25 mi despesas totais',
+                    'texto texto texto texto texto texto texto texto texto texto texto',
                 ]
             },
             {
-                topic: '2º trimestre',
+                topic: 'Quantidade de despesas: 29930',
                 list: [
-                    'Média de gasto  112314 ',
-                    'Quantidade de despesas: 46806',
-                    'Aprox 20 mi',
+                    'texto texto texto texto texto texto texto texto texto texto texto',
                 ]
             },
             {
-                topic: '3º trimestre',
+                topic: 'Aprox 25 mi despesas totais',
                 list: [
-                    'Média de gasto 104898 ',
-                    'Quantidade de despesas 53380',
-                    'Aprox 17',
+                    'texto texto texto texto texto texto texto texto texto texto texto',
                 ]
             },
-            {
-                topic: '4º Trimestre',
-                list: [
-                    'Média de gasto 87129 ',
-                    'Quantidade de despesas 79308',
-                    'Aprox 18 mi',
-                ]
-            }
+            // {
+            //     topic: '2º trimestre',
+            //     list: [
+            //         'Média de gasto  112314 ',
+            //         'Quantidade de despesas: 46806',
+            //         'Aprox 20 mi',
+            //     ]
+            // },
+            // {
+            //     topic: '3º trimestre',
+            //     list: [
+            //         'Média de gasto 104898 ',
+            //         'Quantidade de despesas 53380',
+            //         'Aprox 17',
+            //     ]
+            // },
+            // {
+            //     topic: '4º Trimestre',
+            //     list: [
+            //         'Média de gasto 87129 ',
+            //         'Quantidade de despesas 79308',
+            //         'Aprox 18 mi',
+            //     ]
+            // }
         ],
         'servidoresPublicos': [
             {
-                topic: 'Total ',
+                topic: 'Média de gasto por despesa: 4313',
                 list: [
-                    'Média de gasto por despesa: 4313',
-                    'Quantidade de servidores: 1,93 mi',
-                    'Aprox 8,2 mi ',
+                    'texto texto texto texto texto texto texto texto texto texto texto',
                 ]
-            }
+            },
+            {
+                topic: 'Quantidade de servidores: 1,93 mi ',
+                list: [
+                    'texto texto texto texto texto texto texto texto texto texto texto',
+                ]
+            },
+            {
+                topic: 'Aprox 8,2 mi',
+                list: [
+                    'texto texto texto texto texto texto texto texto texto texto texto',
+                ]
+            },
         ],
         'coronavirus': [
             {
-                topic: 'Total ',
+                topic: 'Média de despesa no Coronavírus: 151665',
                 list: [
-                    'Média de despesa no Coronavírus: 151665',
-                    'Quantidade de despesas: 9872',
-                    'Aprox  11,5 mi',
+                    'texto texto texto texto texto texto texto texto texto texto texto',
                 ]
-            }
+            },
+            {
+                topic: 'Quantidade de despesas: 9872',
+                list: [
+                    'texto texto texto texto texto texto texto texto texto texto texto',
+                ]
+            },
+            {
+                topic: 'Aprox  11,5 mi',
+                list: [
+                    'texto texto texto texto texto texto texto texto texto texto texto',
+                ]
+            },
         ],
     }
 
@@ -102,7 +152,7 @@ export function Indicators({route, navigation}) {
                         color: '#FFF',
                     }}
                 >
-                    {label}
+                    {label === 'despesasNotaEmpenho' ? 'Despesas por nota de empenho' : label === 'servidoresPublicos' ? 'Servidores Públicos' : label}
                 </ResponsiveText>
             </View>
 
@@ -110,7 +160,7 @@ export function Indicators({route, navigation}) {
 
             <ScrollView>
                 {data[label].map((data) => (
-                    <View style={{paddingHorizontal: 20, marginVertical: 10}}>
+                    <View key={data.topic} style={{paddingHorizontal: 20, marginVertical: 10}}>
                         <View style={{backgroundColor: 'rgba(193, 193, 193, 0.8)', borderRadius: 12, elevation: 5}}>
                             <ResponsiveText h5 style={{color: '#000', marginTop: 10, paddingHorizontal: 10}}>
                                 {data.topic}
