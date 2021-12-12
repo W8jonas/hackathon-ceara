@@ -53,21 +53,21 @@ export function Indicators({route, navigation}) {
                 topic: 'Média de despesa em contratos',
                 title: 'R$ 1.225.494,00',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador mostra o quanto foi despendido de recurso no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas',
                 title: '1162',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas total',
                 title: 'Aprox. R$ 17,5 mi',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade total de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             }
         ],
@@ -76,21 +76,21 @@ export function Indicators({route, navigation}) {
                 topic: 'Média de despesa em contratos',
                 title: 'R$ 847.216,00',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador mostra o quanto foi despendido de recurso no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas',
                 title: '640',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas total',
                 title: 'Aprox. R$ 12 mi',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade total de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             }
         ],
@@ -99,21 +99,21 @@ export function Indicators({route, navigation}) {
                 topic: 'Média de despesa em contratos',
                 title: 'R$ 486.474,00',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador mostra o quanto foi despendido de recurso no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas',
                 title: '3884',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas total',
                 title: 'Aprox. R$ 20 mi',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade total de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             }
         ],
@@ -122,21 +122,21 @@ export function Indicators({route, navigation}) {
                 topic: 'Média de despesa em Convênios',
                 title: 'R$ 491.032,00',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador mostra o quanto foi despendido de recurso no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas',
                 title: '3884',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas total',
                 title: 'Aprox. R$  19 mi',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade total de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
         ],
@@ -145,21 +145,21 @@ export function Indicators({route, navigation}) {
                 topic: 'Média de gasto por despesa',
                 title: 'R$ 154.349,00',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador mostra o quanto foi despendido de recurso no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas',
                 title: '29930',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas total',
                 title: 'Aprox. R$ 25 mi',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade total de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             // {
@@ -195,21 +195,21 @@ export function Indicators({route, navigation}) {
                 topic: 'Média de gasto por despesa',
                 title: 'R$ 4.313,00',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador mostra o quanto foi despendido de recurso no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de servidores',
                 title: '1,93 mi',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas total',
                 title: 'Aprox. R$ 8,2 mi',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade total de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
         ],
@@ -218,21 +218,21 @@ export function Indicators({route, navigation}) {
                 topic: 'Média de despesa no Coronavírus:',
                 title: 'R$ 151.665,00',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador mostra o quanto foi despendido de recurso no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas:',
                 title: '9872',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
             {
                 topic: 'Quantidade de despesas total',
                 title: '11, 5mi',
                 list: [
-                    'texto texto texto texto texto texto texto texto texto texto texto',
+                    'Esse indicador tem o propósito de informar a quantidade total de despesas no ano de 2020 nesse tipo de despesa.',
                 ]
             },
         ],

@@ -93,7 +93,7 @@ export function Home({navigation}) {
         <View style={styles.container}>
 
             <ResponsiveText style={{color: '#000', marginVertical: 10, marginTop: 50, alignSelf: 'center'}} h1>
-                Informações
+                Temas
             </ResponsiveText>
 
             <View style={{height: 80}} />
