@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Dimensions,
 
 // Modules
 import Carousel from 'react-native-snap-carousel';
+import { Audio } from 'expo-av';
 
 // Assets
 import fornecimento from '../../assets/fornecimento.png'
@@ -33,6 +34,27 @@ export function Home({navigation}) {
     const imageWidthResized = screenWidth * 0.8
     const imageHeightResized = imageWidthResized / proportion
 
+    const [sound, setSound] = useState()
+
+    async function playSound() {
+        console.log('Playing Sound');
+        await sound.playAsync()
+    }
+
+    useEffect(() => {
+        console.log('Loading Sound');
+        Audio.Sound.createAsync(
+           require('../../assets/sounds/pop.mp3')
+        ).then(({sound}) => {setSound(sound)})
+    }, [])
+
+    useEffect(() => {
+        return sound
+          ? () => {sound.unloadAsync()}
+          : undefined
+    }, [sound])
+
+      
     const data = [
         {label: 'obras', title: 'Despesas por Obras', image: obras, redirect: true },
         {label: 'contratosConvenios', title: 'Contratos e Convênios', image: contratosEConvenios, redirect: true },
@@ -46,9 +68,12 @@ export function Home({navigation}) {
             <View>
                 <TouchableOpacity
                     activeOpacity={0.7}
-                    onPress={() => item.redirect 
+                    onPress={() => {
+                        item.redirect 
                         ? navigation.navigate(routesPaths.redirect, {label: item.label}) 
                         : navigation.navigate(routesPaths.indicators, {label: item.label})
+                        playSound()
+                        }
                     }
                 >
                     <ImageBackground source={background} style={{ width: imageWidthResized, height: imageHeightResized, alignSelf: 'center'}}>
