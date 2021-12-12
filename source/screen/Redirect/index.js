@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Dimensions, ScrollView } from 'react-native'
 
 // Modules
-import Accordion from 'react-native-collapsible/Accordion';
 
 // Assets
 import fornecimento from '../../assets/fornecimento.png'
+import { Header } from '../../components/Header';
 
 // Functions
 
@@ -13,6 +13,12 @@ import fornecimento from '../../assets/fornecimento.png'
 import { ResponsiveText } from '../../components/ResponsiveText'
 import { baseColors, baseGradients } from '../../config/style';
 import { routesPaths } from '../../routes/routesPaths';
+
+
+import car from './car.png'
+import contract from './contract.png'
+import hotel from './hotel.png'
+import partnership from './partnership.png'
 
 const screenWidth = Dimensions.get('window').width
 
@@ -31,43 +37,17 @@ export function Redirect({ route, navigation }) {
     return (
         <View style={styles.container}>
 
-            <View 
-             style={{ 
-                    marginTop: 50, 
-                    marginBottom: 20, 
-                    width: '100%', 
-                    flexDirection: 'row', 
-                    justifyContent: 'space-around', 
-                    alignItems: 'center'
-                }}
-            >
-                <TouchableOpacity
-                    activeOpacity={0.5}
-                    onPress={() => navigation.goBack()}
-
-                >
-                    <ResponsiveText
-                        h4
-                        style={{
-                            color: '#000',
-                        }}
-                    >
-                        A
-                    </ResponsiveText>
-                </TouchableOpacity>
-
-                <ResponsiveText style={{ color: '#000', alignSelf: 'center' }} h3>
-                    Escolha o assunto
-                </ResponsiveText>
-
+            <View style={{marginTop: 50 }}>
+                <Header title="Escolha o assunto" size={'large'} onPress={() => navigation.goBack()} />
             </View>
-            
+
             <View>
                 {options[label].map((item) => (
                     <Button key={item} label={item} onPress={() => navigation.navigate(routesPaths.indicators, {label: item})}  />
                 ))}
             </View>
-
+            
+            <View style={{height: 200}} />
             <Image source={fornecimento} style={{ width: screenWidth, resizeMode: 'stretch', alignSelf: 'center' }} />
         </View>
     )
@@ -75,6 +55,26 @@ export function Redirect({ route, navigation }) {
 
 
 function Button({label, onPress, style}) {
+    
+    function getIcon(label) {
+        switch (label) {
+            case 'Rodoviárias':
+                return car
+    
+            case 'Edificações':
+                return hotel
+    
+            case 'Contratos':
+                return contract
+    
+            case 'Convênios':
+                return partnership
+    
+            default:
+                return partnership
+        }
+    }
+
     return (
         <TouchableOpacity
             onPress={onPress}
@@ -82,18 +82,23 @@ function Button({label, onPress, style}) {
             style={{
                 backgroundColor: baseColors.base2, 
                 height: 50, 
-                width: '80%', 
+                width: '90%', 
                 borderRadius: 30, 
-                justifyContent: 'center',
+                alignSelf: 'center',
                 paddingHorizontal: 20,
+                alignItems: 'center',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
                 elevation: 2,
-                marginVertical: 10,
+                marginVertical: 30,
                 ...style
             }}
         >
             <ResponsiveText h4 style={{color: '#FFF'}}>
                 {label}
             </ResponsiveText>
+
+            <Image source={getIcon(label)} style={{ width: screenWidth, resizeMode: 'contain', position: 'relative', bottom: 20 }} />
         </TouchableOpacity>
     )
 }
