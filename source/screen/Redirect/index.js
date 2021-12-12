@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Dimensions, ScrollView } from 'react-native'
 
 // Modules
+import { Audio } from 'expo-av';
 
 // Assets
 import fornecimento from '../../assets/fornecimento.png'
@@ -32,6 +33,27 @@ export function Redirect({ route, navigation }) {
         'contratosConvenios': ['Contratos', 'Convênios'],
     }
 
+    const [sound, setSound] = useState()
+
+    async function playSound() {
+        console.log('Playing Sound');
+        await sound.playAsync()
+    }
+
+    useEffect(() => {
+        console.log('Loading Sound');
+        Audio.Sound.createAsync(
+           require('../../assets/sounds/pop.mp3')
+        ).then(({sound}) => {setSound(sound)})
+    }, [])
+
+    useEffect(() => {
+        return sound
+          ? () => {sound.unloadAsync()}
+          : undefined
+    }, [sound])
+
+
     return (
         <View style={styles.container}>
 
@@ -41,7 +63,14 @@ export function Redirect({ route, navigation }) {
 
             <View>
                 {options[label].map((item) => (
-                    <Button key={item} label={item} onPress={() => navigation.navigate(routesPaths.indicators, {label: item})}  />
+                    <Button
+                        key={item}
+                        label={item}
+                        onPress={() => {
+                            navigation.navigate(routesPaths.indicators, {label: item})
+                            playSound()
+                        }}
+                    />
                 ))}
             </View>
             
