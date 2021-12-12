@@ -44,7 +44,6 @@ const SECTIONS = [
 ]
 
 
-
 export function Questions({ navigation }) {
 
     const [activeSections, setActiveSections] = useState([])
