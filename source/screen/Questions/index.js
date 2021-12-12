@@ -21,26 +21,26 @@ const BACON_IPSUM =
 
 const SECTIONS = [
     {
-        title: 'Como posso ver X',
-        content: BACON_IPSUM,
+        title: 'O que são dados abertos?',
+        content: 'São dados que qualquer pessoa pode livremente acessá-los, utilizá-los, modificá-los e compartilhá-los para qualquer finalidade, estando sujeito a, no máximo, a exigências que visem preservar sua proveniência e sua abertura.',
     },
     {
-        title: 'Como posso ver X',
-        content: BACON_IPSUM,
+        title: 'Há perigo em compartilhar esses dados?',
+        content: 'Os dados abertos servem para que a sociedade possa verificar, esclarecer, fiscalizar e acompanhar as informações produzidas pelo governo, dessa maneira, não nenhuma informação sensível neles. ',
     },
     {
-        title: 'Como posso ver X',
-        content: BACON_IPSUM,
+        title: 'Existe lei que o obriga os dados a serem compartilhados?',
+        content: 'Sim. Em 18 de novembro de 2011 foi sancionada a Lei de Acesso a Informação Pública (Lei 12.527/2011) que regula o acesso a dados e informações detidas pelo governo.A Política de Dados Abertos foi consolidada pelo Decreto n.º 8.777, de 2016. ',
     },
     {
-        title: 'Como posso ver X',
-        content: BACON_IPSUM,
+        title: 'Qual a finalidade do app Ceará na mão?',
+        content: 'Possibilitar ao cearense e todo aquele interessado em dados abertos do governo do Ceára mais facilidade e transparência.',
     },
     {
-        title: 'Como posso ver X',
-        content: BACON_IPSUM,
+        title: 'O que são metadados?',
+        content: 'Metadados são geralmente descritos como dados sobre dados e são essenciais na organização e classificação de conjuntos de dados. Todo conjunto de dados estruturado faz uso de metadados para descrever a forma e os tipos de dados nele contidos.',
     },
-];
+]
 
 
 

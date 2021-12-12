@@ -32,8 +32,6 @@ export function Redirect({ route, navigation }) {
         'contratosConvenios': ['Contratos', 'Convênios'],
     }
 
-    console.log('options: ', label)
-
     return (
         <View style={styles.container}>
 
