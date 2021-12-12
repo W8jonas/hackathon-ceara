@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, ScrollView, TouchableOpacity, Image, Alert } from 'react-native'
+import { View, ScrollView, TouchableOpacity, Image, Alert, Linking } from 'react-native'
 import { Header } from '../../components/Header'
 import { ResponsiveText } from '../../components/ResponsiveText'
 
@@ -230,12 +230,22 @@ export function Indicators({route, navigation}) {
             },
             {
                 topic: 'Quantidade de despesas total',
-                title: 'mi',
+                title: '11, 5mi',
                 list: [
                     'texto texto texto texto texto texto texto texto texto texto texto',
                 ]
             },
         ],
+    }
+
+    const links = {
+        'Rodoviárias': 'https://drive.google.com/drive/folders/1rfgK2-AGFR53cUUTL7xRWE-X2qhRT0BK?usp=sharing',
+        'Edificações': 'https://drive.google.com/drive/folders/1MRIXD1fULHwvM08XvaSDfPccjAUL1ma7?usp=sharing',
+        'Contratos': 'https://drive.google.com/drive/folders/1ca0zL7OQHBj3hGzh3PKpC-4qNjd9gkC_?usp=sharing',
+        'Convênios': 'https://drive.google.com/drive/folders/1kJPcpMo99OhkLybY2lmKO4zQlFtYjkR-?usp=sharing',
+        'despesasNotaEmpenho': 'https://drive.google.com/drive/folders/1F5EbimAoh_H8iDiSMVBPj2346TuVCSDn?usp=sharing',
+        'servidoresPublicos': 'https://drive.google.com/drive/folders/16C2LUz_UntMubCPeeq-tVsEIRwrKUpCw?usp=sharing',
+        'coronavirus': 'https://drive.google.com/drive/folders/1apnm8MUTOITUJbm-SKW2tz2vE_w0-GGa?usp=sharing',
     }
 
     const [sound, setSound] = useState()
@@ -248,7 +258,7 @@ export function Indicators({route, navigation}) {
     useEffect(() => {
         console.log('Loading Sound');
         Audio.Sound.createAsync(
-           require('../../assets/sounds/pop.mp3')
+           require('../../assets/sounds/popcork.mp3')
         ).then(({sound}) => {setSound(sound)})
     }, [])
 
@@ -257,6 +267,19 @@ export function Indicators({route, navigation}) {
           ? () => {sound.unloadAsync()}
           : undefined
     }, [sound])
+
+          
+	function handleOpenWeb() {
+        const webUrl = links[label]
+
+		Linking.canOpenURL(webUrl).then((supported) => {
+			if (supported) {
+				Linking.openURL(webUrl)
+			} else {
+				console.log(`Don't know how to open URI: ${webUrl}`)
+			}
+		})
+	}
 
 
     return (
@@ -331,7 +354,7 @@ export function Indicators({route, navigation}) {
 
                     <TouchableOpacity 
                         activeOpacity={0.5} 
-                        onPress={() => {playSound()}}
+                        onPress={() => {playSound(), handleOpenWeb()}}
                         style={{
                             backgroundColor: 'rgba(248, 248, 248, 0.6)',
                             borderRadius: 30,
