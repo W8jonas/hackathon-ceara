@@ -6,6 +6,7 @@ import { ResponsiveText } from '../../components/ResponsiveText'
 // Modules
 import * as Sharing from 'expo-sharing'
 import * as FileSystem from 'expo-file-system';
+import { Audio } from 'expo-av';
 
 // Assets
 
@@ -237,6 +238,27 @@ export function Indicators({route, navigation}) {
         ],
     }
 
+    const [sound, setSound] = useState()
+
+    async function playSound() {
+        console.log('Playing Sound');
+        await sound.playAsync()
+    }
+
+    useEffect(() => {
+        console.log('Loading Sound');
+        Audio.Sound.createAsync(
+           require('../../assets/sounds/pop.mp3')
+        ).then(({sound}) => {setSound(sound)})
+    }, [])
+
+    useEffect(() => {
+        return sound
+          ? () => {sound.unloadAsync()}
+          : undefined
+    }, [sound])
+
+
     return (
         <View style={{flex: 1}}>
             <View style={{backgroundColor: '#006C30', width: '100%', height: 80, paddingTop: 30, alignItems: 'center', justifyContent: 'center'}}>
@@ -282,9 +304,60 @@ export function Indicators({route, navigation}) {
                         </ResponsiveText>
                     </View>
                 ))}
-            </ScrollView>
+                
+                <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>
+                    <View 
+                        style={{
+                            backgroundColor: 'rgba(248, 248, 248, 0.6)',
+                            borderRadius: 30,
+                            elevation: 5,
+                            alignSelf: 'center',
+                        }} 
+                    >
+                        <ResponsiveText 
+                            h5
+                            style={{
+                                color: '#000', 
+                                paddingHorizontal: 20, 
+                                paddingVertical: 6, 
+                                backgroundColor: '#FFF', 
+                                borderRadius: 30, 
+                        }}
+                        >
+                            Fonte dos dados: {'\n'}
+                            Controladoria do Estado
+                        </ResponsiveText>
+                    </View>
 
+                    <TouchableOpacity 
+                        activeOpacity={0.5} 
+                        onPress={() => {playSound()}}
+                        style={{
+                            backgroundColor: 'rgba(248, 248, 248, 0.6)',
+                            borderRadius: 30,
+                            elevation: 5,
+                            alignSelf: 'center',
+                        }} 
+                    >
+                        <ResponsiveText 
+                            h5
+                            style={{
+                                color: '#000', 
+                                textAlign: 'center', 
+                                paddingHorizontal: 20, 
+                                paddingVertical: 10, 
+                                backgroundColor: '#FFF', 
+                                borderRadius: 30, 
+                        }}
+                        >
+                            Baixar dados
+                        </ResponsiveText>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={{height: 40}} />
+                
+            </ScrollView>
         </View>
     )
 }
-
