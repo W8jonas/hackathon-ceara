@@ -6,6 +6,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput } from 'reac
 // Assets
 import { ButtonBase } from '../../components/Button';
 import { SimpleButton } from '../../components/SimpleButton';
+import logoIcon2 from '../../assets/logoIcon2.png'
 
 // Functions
 
@@ -57,9 +58,7 @@ export function OnboardingTopics({navigation}) {
                     ))}
                 </View>
 
-                <ResponsiveText style={{color: '#222', marginVertical: 10, textAlign: 'center'}} h4>
-                    Informação para a população sobre dados abertos é um dos objetivos do Governo do Ceára.
-                </ResponsiveText>
+                <Image source={logoIcon2} style={{ height: 203/1.2, width: 203/1.2, alignSelf: 'center'}} />
                 
                 <ButtonBase
                     label="Prosseguir"
