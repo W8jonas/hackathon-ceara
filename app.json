@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "hackathon-ceara-app",
-    "slug": "hackathon-ceara-app",
+    "name": "Ceará na Mão",
+    "slug": "ceara-na-mao",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,6 +20,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.edhackers.ceara_na_mao",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
