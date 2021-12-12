@@ -9,6 +9,7 @@ import { ResponsiveText } from '../../components/ResponsiveText'
 
 // Functions
 import background from './background.png'
+import share from './share.png'
 
 // Components
 
@@ -162,11 +163,16 @@ export function Indicators({route, navigation}) {
                 {data[label].map((data) => (
                     <View key={data.topic} style={{paddingHorizontal: 20, marginVertical: 10}}>
                         <View style={{backgroundColor: 'rgba(193, 193, 193, 0.8)', borderRadius: 12, elevation: 5}}>
-                            <ResponsiveText h5 style={{color: '#000', marginTop: 10, paddingHorizontal: 10}}>
-                                {data.topic}
-                            </ResponsiveText>
+                            <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                                <ResponsiveText h5 style={{color: '#000', marginTop: 10, paddingLeft: 10,}}>
+                                    {data.topic}
+                                </ResponsiveText>
+                                <TouchableOpacity activeOpacity={0.5} onPress={() => {console.log("sdsadsad")}}>
+                                    <Image source={share} style={{ width: 37, height: 37, resizeMode: 'contain', position: 'relative', right: 5, top: 5}} />
+                                </TouchableOpacity>
+                            </View>
 
-                            <Image source={background} style={{ width: '90%', resizeMode: 'contain', alignSelf: 'center', marginBottom: 10 }} />
+                                <Image source={background} style={{ width: '90%', resizeMode: 'contain', alignSelf: 'center', marginBottom: 10 }} />
                         </View>
 
                         <ResponsiveText p style={{color: '#000', paddingHorizontal: 8, marginTop: 5}}>
