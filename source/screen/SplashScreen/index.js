@@ -29,7 +29,7 @@ export function SplashScreen({navigation}) {
             start={baseGradients.linearDarkBlue.start}
             end={baseGradients.linearDarkBlue.end}
         >
-            <Image source={SplashImg} style={{ height: 142/1.1, width: 242/1.1 }} />
+            <Image source={SplashImg} style={{ height: 203/1.1, width: 203/1.1 }} />
         </LinearGradient>
     )
 }
