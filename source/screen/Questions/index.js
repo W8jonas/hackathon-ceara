@@ -67,7 +67,7 @@ export function Questions({ navigation }) {
     function _renderContent(section) {
         return (
             <View style={styles.content}>
-                <Text>{section.content}</Text>
+                <Text style={{fontSize: 16}}>{section.content}</Text>
             </View>
         )
     }
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         width: '90%', marginVertical: 10
     },
     headerText: {
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: '500',
     },
     content: {
