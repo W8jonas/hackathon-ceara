@@ -35,7 +35,7 @@ export function Routes() {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="Home">
+            <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="splash">
                 <Stack.Screen name={routesPaths.splash} component={SplashScreen} />
                 <Stack.Screen name={routesPaths.onboardingTransparency} component={OnboardingTransparency} />
                 <Stack.Screen name={routesPaths.onboardingEasy} component={OnboardingEasy} />
