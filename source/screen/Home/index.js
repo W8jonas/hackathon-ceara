@@ -116,7 +116,6 @@ export function Home({navigation}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 10,
         justifyContent: 'space-between',
         backgroundColor: baseColors.backgroundWhite
     },

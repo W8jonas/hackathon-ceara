@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { View, ScrollView, TouchableOpacity, Image } from 'react-native'
+import { Header } from '../../components/Header'
 import { ResponsiveText } from '../../components/ResponsiveText'
 
 // Modules
@@ -11,7 +12,7 @@ import background from './background.png'
 
 // Components
 
-export function Indicators({route}) {
+export function Indicators({route, navigation}) {
     const {label} = route.params
 
     const data = {
@@ -94,7 +95,7 @@ export function Indicators({route}) {
 
     return (
         <View style={{flex: 1}}>
-            <View style={{backgroundColor: '#006C30', width: '100%', height: 80, paddingTop: 30, marginBottom: 10, alignItems: 'center', justifyContent: 'center'}}>
+            <View style={{backgroundColor: '#006C30', width: '100%', height: 80, paddingTop: 30, alignItems: 'center', justifyContent: 'center'}}>
                 <ResponsiveText
                     h2
                     style={{
@@ -104,7 +105,9 @@ export function Indicators({route}) {
                     {label}
                 </ResponsiveText>
             </View>
-            
+
+            <Header title="Indicadores" onPress={() => navigation.goBack()} />
+
             <ScrollView>
                 {data[label].map((data) => (
                     <View style={{paddingHorizontal: 20, marginVertical: 10}}>
@@ -116,7 +119,7 @@ export function Indicators({route}) {
                             <Image source={background} style={{ width: '90%', resizeMode: 'contain', alignSelf: 'center', marginBottom: 10 }} />
                         </View>
 
-                        <ResponsiveText p style={{color: '#000', paddingHorizontal: 8, marginTop: 5, marginBottom: 10}}>
+                        <ResponsiveText p style={{color: '#000', paddingHorizontal: 8, marginTop: 5}}>
                             {data.list.map((item) => (
                                 '▪ ' + item + '\n'
                             ))}
