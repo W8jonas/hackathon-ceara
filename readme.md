@@ -45,12 +45,13 @@ https://ceara-na-mao-21.web.app/
 
 
 ## Ceará na Mão - Propósito
-Nosso propósito
+Possibilitar aos cidadãos cearenses as principais informações do Estado na palma da sua mão para que eles estejam antenados e cientes da transparência do governo.
 <br/>
 
 
+
 ## Nosso produto (Resumo)
-Nosso produto
+O CGE nos apresentou a necessidade que os usuários tinham em procurar por informações dos gastos da sua cidade e a dificuldade que encontravam para realizar esta tarefa. Diante disso, pensamos no "Ceará na mão", um aplicativo que ajuda ao usuário localizar o que deseja de forma simples e prática e ainda possibilidade compartilhar estes dados com seus amigos e familiares.
 <br/>
 
 
@@ -88,14 +89,13 @@ Escolhemos essa stack por dois motivos principais: Nos garante desenvolvimento d
 
 ## Nosso time:
 
-Ana Terra Cotta – Profissional de Publicidade, autista, que luta por educação mais inclusiva baseada em sua própria vivência. <br/>
-Jonas Nascimento – Desenvolvedor e Empreendedor na área de Educação Digital. <br/>
-Laís Cosmo Lopes – Profissional de Marketing e Empreendedora na área de Educação Digital. <br/>
+Nossa equipe é formada por empreendedores, com foco na acessibilidade para todos e que cria soluções para facilitar a vida das pessoas.
+
+Ana Paula de Resende Terra Cotta – Profissional de Publicidade e Aspie <br/>
+Jonas Henrique Nascimento – Desenvolvedor e Empreendedor na área de Educação Digital. <br/>
+Laís Cosmo Lopes – Profissional de Marketing e Empreendedora. <br/>
 Victor Ferreira – Gerente de produto e empreendedor educação digital. 
 
-O desafio do SENAC trouxe como dor a **necessidade da interação entre alunos presenciais e alunos no digital**, de maneira que conseguisse passar a experiência SENAC de vivenciar o curso, além de ser uma plataforma que possua alto nível de segurança. 
-
-Mediante esse problema nossa solução foi criar a edukaALL. EdukaALL é um aplicativo híbrido (iphone e android) white label voltado à gamificação e interação entre alunos de um determinado curso ou escola.
 
 <br/>
 
