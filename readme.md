@@ -20,11 +20,11 @@
 
 
 <p align="center">
-  <a href="#Ceará-na-Mão---Propósito">Ceará na Mão</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Ceará-na-Mão---Propósito">Ceará na Mão - Nosso propósito</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#nosso-produto-resumo">Nosso Produto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#Nosso-time">Nosso time</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#informações-adicionais">Informações adicionais</a>
+  <a href="#Nossas-redes">Nossas redes sociais</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 
@@ -45,41 +45,44 @@ https://ceara-na-mao-21.web.app/
 
 
 ## Ceará na Mão - Propósito
-
+Nosso propósito
+<br/>
 
 
 ## Nosso produto (Resumo)
+Nosso produto
+<br/>
 
 
 ## Tecnologias
 
-Esse projeto foi desenvolvido utilizando como principal linguagem o **Javascript**, usando o framework **React-Native** e **Expo**, além de **Firebase** no backend.
+Temos dois projetos, um aplicativo e um website.
+O aplicativo, nosso principal foco, foi desenvolvido utilizando como principal linguagem o **Javascript**, usando o framework **React-Native** e **Expo**, além de **Firebase** no backend.
 
-Escolhemos essa stack por dois motivos principais: Nos garante desenvolvimento de uma plataforma consistente tanto no Android quanto em dispositivos Iphone, além de proporcionar um desenvolvimento mais rápido, mas sem perder performance.
+Já a lading-page foi desenvolvida utilizando **Javascript** e **Firebase** para hosting.
+
+Escolhemos essa stack por dois motivos principais: Nos garante desenvolvimento de uma plataforma consistente tanto no Android quanto em dispositivos Iphone, além de proporcionar um desenvolvimento mais rápido, mas sem perder performance. O mesmo é válido para o site.
 
 <details>
-  <summary>Frontend</summary>
-  
+  <summary>Aplicativo</summary>
+
  - Javascript
- - Firebase
  - Lottie animations
  - React Navigation
- - react native dotenv
  - expo linear gradient
  - expo font
 
 </details>
 
 <details>
-  <summary>Backend</summary>
+  <summary>Site</summary>
 
  - Javascript
- - Firebase
- - Firestore database
+ - Firebase Hosting
+ - Html, CSS, Bootstrap, jquery e afins
 
 
 </details>
-
 <br/>
 
 
@@ -96,6 +99,9 @@ Mediante esse problema nossa solução foi criar a edukaALL. EdukaALL é um apli
 
 <br/>
 
+
+
+## Nossas-redes:
 
 Você pode acessar nossas redes pelos botões abaixo: (CTRL + click)
 
@@ -142,3 +148,4 @@ Victor Ferreira:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </a>
 </div>
 
+<br/>
