@@ -2,14 +2,14 @@
 <h1 align="center">
     Ceará na mão
     <br>
-    <img alt="Ceará Na mão" src="fotos_do_projeto/ceara-na-mao.png" width=400 />
+    <img alt="Ceará Na mão" src="fotos_do_projeto/ceara-na-mao.png"/>
 </h1>
 
 <h4 align="right">
         Baixe o App agora para Android!
     <div>
-        <a href="https://expo.io/artifacts/9db94637-77aa-4644-a237-e88ed5e0a203">
-        <img alt="GitHub last commit" src="fotos_do_projeto/google-play.png" width=200>
+        <a href="https://expo.io/artifacts/945a1b28-74a5-49e7-b0a1-ea1401093f38">
+        <img alt="download app" src="fotos_do_projeto/google-play.png" width=200>
         </a>
     <div>
 </h4>

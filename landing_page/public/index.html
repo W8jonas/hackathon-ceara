@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ceará na Mão</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+
+    <!-- Styles -->
+    <link href="css/style.css" rel="stylesheet"  media="screen">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.6.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.6.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.6.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+
+  <!-- Loader -->
+
+  <div class="loader">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+
+  <!-- layout -->
+
+  <div id="layout" class="layout">
+  
+    <!-- Header -->
+
+    <nav class="navbar navbar-expand-lg" data-toggle="affix">
+      <div class="container">
+        <a class="navbar-brand" href="#">Ceará na Mão</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Funcionalidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#clients">Usuários</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home -->
+    
+    <main id="home" class="masthead masked">
+      <div class="opener rel-1">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <img alt="" class="mw-100 d-block mx-auto" src="Frame 6.png">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="text-white mb-3">Simples e poderoso</h1>
+              <p class="lead-text mb-4">Dados abertos de maneira, rápida e simples na palma da sua mão.<br>  Aumentar a transparência é uma das prioridades do governo do Ceará. </p>
+              <div class="lead-controls">
+                <a href="https://expo.io/artifacts/945a1b28-74a5-49e7-b0a1-ea1401093f38" class="btn-lead btn mr-3">Baixe agora</a>
+                <a href="https://www.youtube.com/watch?v=257sCZVvk30&ab_channel=W8Jonas"  data-effect="mfp-zoom-in" class="text-white play js-play">
+                  <i class="text-white mr-2 align-middle fa fa-4x fa-play-circle"></i>Assista ao vídeo demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+
+    <!-- Content -->
+
+    <div class="content">
+
+      <!-- About  -->
+
+      <section id='about' class="text-center section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 wow fadeInUp">
+              <img alt="" class="fa" src="./icon1.png">
+              <h5 class="mt-3">Moderno</h5>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 wow fadeInUp" data-wow-delay="0.3s">
+              <img alt="" class="fa" src="./icon2.png">
+              <h5 class="mt-3">Confiável</h5>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+              <img alt="" class="fa" src="./icon3.png">
+              <h5 class="mt-3">Acessível</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features  -->
+
+      <section id="features" class="section bg-light">
+        <div class="container">
+          <div class="row align-items-center">  
+            <div class="col-lg-6 mb-5 mb-lg-0 text-center wow fadeInLeft">
+              <img alt="" class="mw-100" src="Frame 8.png">
+            </div>
+            <div class="col-lg-5">
+              <h2 class="section-title">Funcionalidades</h2>
+              <div class="mt-5">
+                <div class="mb-5">
+                  <h6>Procure os dados que você gosta</h6>
+                  </p>
+                </div>
+                <div class="mb-5">
+                  <h6>Tenha acesso as informações de forma mastigada</h6>
+                </div>
+                <div class="mb-5">
+                  <h6>Tenha o controle do seu Estado</h6>
+                </div>
+                <h6>Compartilhe as informações com seus amigos</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Reviews -->
+        
+      <section id="clients" class="reviews text-center section">
+        <div class="container">
+          <div class="row">
+            <div class="text-center col-md-6 offset-md-3">
+              <h2 class="section-title">Clients says</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </div>
+          </div>
+          <div class="section-body">
+            <div class="row">
+              <div class="review-carousel owl-theme owl-carousel">
+                <div class="review col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                  <img alt="" class="img-circle" src="img/reviews/1.jpg">
+                  <h5 class="mt-3">James Thornton</h5>
+                  <p>
+                  «Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias harum aperiam ea. Tempore cumque, debitis accusamus iusto beatae corporis illum quos illo itaque esse. Sapiente porro pariatur necessitatibu!</p>
+                </div>
+                <div class="review col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                  <img alt=""  src="img/reviews/2.jpg">
+                  <h5 class="mt-3">James Thornton</h5>
+                  <p>
+                  «Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias harum aperiam ea. Tempore cumque, debitis accusamus iusto beatae corporis illum quos illo itaque esse. Sapiente porro pariatur necessitatibu!</p>
+                </div>
+                <div class="review col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                  <img alt=""  src="img/reviews/3.jpg">
+                  <h5 class="mt-3">James Thornton</h5>
+                  <p>
+                  «Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias harum aperiam ea. Tempore cumque, debitis accusamus iusto beatae corporis illum quos illo itaque esse. Sapiente porro pariatur necessitatibu!</p>
+                </div>
+                <div class="review col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                  <img alt=""  src="img/reviews/1.jpg">
+                  <h5 class="mt-3">James Thornton</h5>
+                  <p>
+                  «Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias harum aperiam ea. Tempore cumque, debitis accusamus iusto beatae corporis illum quos illo itaque esse. Sapiente porro pariatur necessitatibu!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner -->
+
+      <section id="banner" class="banner text-white bgc-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <h2 class="banner-title text-white">Baixe aqui</h2>
+            </div>
+            <div class="col-lg-5 mb-4 mb-lg-0">   </div>
+            <div class="col-lg-3">
+              <a href="https://expo.io/artifacts/945a1b28-74a5-49e7-b0a1-ea1401093f38" class="btn btn-b-white wow swing" >Baixe agora</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer -->
+
+    <footer id="footer" class="footer text-center">
+      <div class="container">
+        <div class="social">
+          <a href="https://github.com/W8jonas/hackathon-ceara" class="fa fa-2x fa-github"></a>
+        </div>
+       
+      </div>
+       <div class="copy">
+          © 2021 W8Jonas. All rights reserved by W8Jonas
+        </div>
+    </footer>
+  </div>
+
+  <!-- Modals -->
+
+  <div id="request" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <span class="close" data-dismiss="modal" aria-label="Close">&times;</span>
+            <h2 class="modal-title text-center">Contact</h2>
+          </div>
+          <div class="modal-body text-center">
+              <form  class="form-request js-ajax-form">
+                <div class="row-fields row">
+                  <div class="form-group col-field col-sm-6">
+                      <input type="text" class="form-control" name="name" required placeholder="Name *">
+                  </div>
+                   <div class="form-group col-field col-sm-6">
+                      <input type="email" class="form-control" name="email" required placeholder="Email *">
+                    </div>
+                  <div class="form-group col-field col-sm-12">
+                      <textarea class="form-control" rows="3" name="message" placeholder="Message"></textarea>
+                  </div>
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn" data-text-hover="Submit">Send request</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modals success -->
+
+  <div id="success" class="modal modal-message fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+            <h2 class="modal-title">Thank you</h2>
+            <p class="modal-subtitle">Your message is successfully sent...</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modals error -->
+
+  <div id="error" class="modal modal-message fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+             <h2 class="modal-title">Sorry</h2>
+            <p class="modal-subtitle"> Something went wrong </p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/interface.js"></script> 
+
+  </body>
+</html>
