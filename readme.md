@@ -35,7 +35,7 @@ https://ceara-na-mao-21.web.app/
 
 
 ## Confira um gif demonstrativo do aplicativo
-![](fotos_do_projeto/app_ceara.png)
+<img src="fotos_do_projeto/app_ceara.gif" height="600">
 
 
 ## Confira um vídeo demonstrativo do aplicativo no youtube:
